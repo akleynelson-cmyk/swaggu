@@ -1,0 +1,155 @@
+ 
+/* ================================
+   COLLECTION HERO
+================================ */
+
+.collection-hero {
+  width: 100%;
+  height: 85vh;
+  min-height: 550px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  z-index: 0;
+}
+
+.collection-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.collection-hero h1 {
+  position: absolute;
+  z-index: 2;
+
+  color: #fff;
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+
+  margin: 0;
+  padding-bottom: 12px;
+
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Heading hover underline */
+
+.collection-hero h1::after {
+  content: "";
+
+  position: absolute;
+  width: 0;
+  height: 3px;
+
+  background: #fff;
+
+  left: 50%;
+  bottom: 0;
+
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.collection-hero h1:hover::after {
+  width: 100%;
+}
+
+
+/* ================================
+   PRODUCT CATEGORY
+================================ */
+
+.product-category {
+  width: 100%;
+  padding: 60px 5%;
+  background: #fff;
+}
+
+.category-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 45px;
+}
+
+.category-heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #111;
+  margin: 0;
+
+  text-align: center;
+}
+
+.category-heading span {
+  width: 75px;
+  height: 3px;
+
+  background: #111;
+  margin-top: 12px;
+}
+
+
+/* ================================
+   COLLECTION HERO RESPONSIVENESS
+================================ */
+
+@media (max-width: 768px) {
+  .collection-hero {
+    height: 75vh;
+    min-height: 480px;
+  }
+
+  .collection-hero h1 {
+    font-size: clamp(35px, 7vw, 50px);
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-hero {
+    height: 65vh;
+    min-height: 400px;
+  }
+
+  .collection-hero h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    padding-bottom: 8px;
+  }
+
+  .collection-hero h1::after {
+    height: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .collection-hero h1 {
+    font-size: 27px;
+    letter-spacing: 1.5px;
+  }
+}
