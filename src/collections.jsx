@@ -1,5 +1,4 @@
-
-import './Collections.css';
+import "./collections.css";
 import Shoes from './shoes.jsx';
 import Tops from './Tops.jsx';
 import Outerwear from './Outerwear.jsx';
