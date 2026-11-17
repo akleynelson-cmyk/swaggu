@@ -1,6 +1,6 @@
  
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Footer from './Footer.jsx';
 import Navbar from './Navbar.jsx';
 import Hero from './Hero.jsx';
 import Collections from './collections.jsx';
@@ -23,6 +23,7 @@ function App() {
               <Route path="/collections" element={<Collections />} />
               <Route path="/cart" element={<Cart />} />
             </Routes>
+            <Footer />
           </div>
         </BrowserRouter>
       </WishlistProvider>
